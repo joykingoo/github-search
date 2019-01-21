@@ -15,7 +15,8 @@ import { RepositoryComponent } from './repository/repository.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
