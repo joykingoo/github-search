@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-  <a href="https://github.com/joyjoie"class="btn btn-default bn-l"> View profile on github
+  <a href="https://github.com/joyjoie" class="btn btn-default bn-l"> View profile on github
     <img src="assets/pix.jpeg" style="height:10%; width:10%">
   </a>
 </div>
@@ -31,6 +31,7 @@
 <div class="panel-heading">
   <h3 class="pane-title"> Repos</h3>
   <div class="panel-body" ngFor="let repo of repos">
-    <p> {{repo.name}}</p>
+    <p class="clearfix"> {{repo.name}} <a href="{{repo.html_url}}" target="blank" class="btn btn-sm btn-warning pull-right"> View the project on github/a></p>
+    <p> {{repo.description}}</p>
   </div>
 </div>
