@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="panel panel-default">
+    <a href="https://github.com/joyjoie">
+      <img src="assets/pix.jpeg" style="height:8%; width:8%">
+    </a>
+  </div>
+</div>
+
+<hr>
+<div class="panel-body" *ngIf='profile'>
+  <div class="row">
+    <div class="col-sm-3">
+      <h4>My github Profile</h4>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-5" *ngIf="profile">
+
+  <p> Name: <b>{{profile.name}} </b></p>
+  <p> Username: <b>{{profile.login }} </b></p>
+  <p> Place : <b>{{profile.location}} </b></p>
+  <p> joined : <b>{{profile.created_at}} </b></p>
+
+</div>
+<div class="col-sm-4">
+  <p>
+    <span class="label label-default">{{profile.followers}} Followers </span>
+    <span class="label label-default"> {{profile.following}} Following </span>
+    <span class="label label-default">{{profile.public_repos}} Repositories </span>
+  </p>
+</div>
