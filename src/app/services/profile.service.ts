@@ -17,4 +17,10 @@ getProfileInfo(){
   return this.http.get("https://api.github.com/users/"+ this.username +"?access_token =d1a4b5149175e44c92d4b29f6fab41c4df850acb")
   .pipe(map(res =>res));
 }
+
+getProfileRepos(){
+  return this.http.get("https://api.github.com/users/"+ this.username +"/repos?client_id")
+  .pipe(map(res =>res));
+
+}
 }

@@ -1,32 +1,36 @@
-<div class="container">
-  <div class="panel panel-default">
-    <a href="https://github.com/joyjoie">
-      <img src="assets/pix.jpeg" style="height:8%; width:8%">
-    </a>
-  </div>
+<div class="panel panel-default">
+  <a href="https://github.com/joyjoie"class="btn btn-default bn-l"> View profile on github
+    <img src="assets/pix.jpeg" style="height:10%; width:10%">
+  </a>
 </div>
-
 <hr>
 <div class="panel-body" *ngIf='profile'>
   <div class="row">
     <div class="col-sm-3">
-      <h4>My github Profile</h4>
+      <h4>My Profile</h4>
     </div>
+  </div>
+
+  <div class="col-sm-5" *ngIf="profile">
+    <p> Name: <b>{{profile.name}} </b></p>
+    <p> Username: <b>{{profile.login }} </b></p>
+    <p> Place : <b>{{profile.location}} </b></p>
+    <p> joined : <b>{{profile.created_at}} </b></p>
+
+  </div>
+  <div class="col-sm-4">
+    <p>
+      <span class="label label-default">{{profile.followers}} Followers </span>
+      <span class="label label-primary"> {{profile.following}} Following </span>
+      <span class="label label-success">{{profile.public_repos}} Repositories </span>
+    </p>
+    <p></p>
   </div>
 </div>
 
-<div class="col-sm-5" *ngIf="profile">
-
-  <p> Name: <b>{{profile.name}} </b></p>
-  <p> Username: <b>{{profile.login }} </b></p>
-  <p> Place : <b>{{profile.location}} </b></p>
-  <p> joined : <b>{{profile.created_at}} </b></p>
-
-</div>
-<div class="col-sm-4">
-  <p>
-    <span class="label label-default">{{profile.followers}} Followers </span>
-    <span class="label label-default"> {{profile.following}} Following </span>
-    <span class="label label-default">{{profile.public_repos}} Repositories </span>
-  </p>
+<div class="panel-heading">
+  <h3 class="pane-title"> Repos</h3>
+  <div class="panel-body" ngFor="let repo of repos">
+    <p></p>
+  </div>
 </div>
