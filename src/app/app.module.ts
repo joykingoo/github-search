@@ -4,13 +4,11 @@ import {HttpClientModule} from '@angular/common/http';
 import { ProfileService} from './services/profile.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RepositoryComponent } from './repository/repository.component';
 import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RepositoryComponent,
     ProfileComponent
   ],
   imports: [

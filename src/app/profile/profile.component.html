@@ -8,11 +8,12 @@
   <div class="row">
     <div class="col-sm-3">
       <h4>My Profile</h4>
+      <img src="{{profile.avatar_url}}" alt="">
     </div>
   </div>
 
   <div class="col-sm-5" *ngIf="profile">
-    <p> Name: <b>{{profile.name}} </b></p>
+    <p> Name:  <b>{{profile.name}} </b></p>
     <p> Username: <b>{{profile.login }} </b></p>
     <p> Place : <b>{{profile.location}} </b></p>
     <p> joined : <b>{{profile.created_at}} </b></p>
@@ -31,7 +32,7 @@
 <div class="panel-heading">
   <h3 class="pane-title"> Repos</h3>
   <div class="panel-body" ngFor="let repo of repos">
-    <p class="clearfix"> {{repo.url}} <a href="{{repos_url}}" target="blank" class="btn btn-sm btn-warning pull-right"> View the project on github</a></p>
-    <p> {{repo.description}}</p>
+    <p class="clearfix"> {{repos.url}} <a href="{{repos_url}}" target="blank" class="btn btn-sm btn-warning pull-right"> View the project on github</a></p>
+    <!-- <p> {{repo.description}}</p> -->
   </div>
 </div>
