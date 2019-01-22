@@ -1,13 +1,11 @@
 <div class="container">
-
-  <form class="" action="index.html" class="search-form">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="search for users in github"[(ngModel)]="username" name="username" (keyup)="findProfile()">
-    </div>
-  </form>
+  <h2>
+    Profile
+    <a routerLink="/repo">Repository</a>
+  </h2>
   <div class="panel panel-default">
     <a href="https://github.com/joyjoie" class="btn btn-info bn-l"> View profile on github
-       <!-- <img src="assets/pix.jpeg" style="height:10%; width:10%"> -->
+      <!-- <img src="assets/pix.jpeg" style="height:10%; width:10%"> -->
     </a>
   </div>
   <hr>
