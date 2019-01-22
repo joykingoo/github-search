@@ -18,7 +18,7 @@
     <p> joined : <b>{{profile.created_at}} </b></p>
 
   </div>
-  <div class="col-sm-4">
+  <div class="col-sm-4" *ngIf="profile" >
     <p>
       <span class="label label-default">{{profile.followers}} Followers </span>
       <span class="label label-primary"> {{profile.following}} Following </span>
@@ -31,7 +31,7 @@
 <div class="panel-heading">
   <h3 class="pane-title"> Repos</h3>
   <div class="panel-body" ngFor="let repo of repos">
-    <p class="clearfix"> {{repo.name}} <a href="{{repo.html_url}}" target="blank" class="btn btn-sm btn-warning pull-right"> View the project on github/a></p>
+    <p class="clearfix"> {{repo.url}} <a href="{{repos_url}}" target="blank" class="btn btn-sm btn-warning pull-right"> View the project on github</a></p>
     <p> {{repo.description}}</p>
   </div>
 </div>
