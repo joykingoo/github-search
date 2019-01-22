@@ -4,7 +4,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
 ## Description
-This is a simple app which displays user content and allows a user to search though their repositories.
+This is a simple app which displays a user and their details from github and allows a user to search through their repositories as well as search for other peoples' repositories.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 Try it out.<https://github.com/joyjoie/github-search>
 ## Development server
