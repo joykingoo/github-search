@@ -1,45 +1,53 @@
-<div class="panel panel-default">
-  <a href="https://github.com/joyjoie" class="btn btn-info bn-l"> View profile on github
-    <!-- <img src="assets/pix.jpeg" style="height:10%; width:10%"> -->
-  </a>
-</div>
-<hr>
-<div class="panel-body" *ngIf='profile'>
-  <div class="row">
-    <div class="col-sm-3">
-      <h4>Profile</h4>
-      <img src="{{profile.avatar_url}}" alt="Profile Image" style="height:89%; width:85%" class="img-circle img-responsive">
+<div class="container">
+
+  <form class="" action="index.html" class="search-form">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="search for users in github"[(ngModel)]="username" name="username" (keyup)="findProfile()">
     </div>
+  </form>
+  <div class="panel panel-default">
+    <a href="https://github.com/joyjoie" class="btn btn-info bn-l"> View profile on github
+       <!-- <img src="assets/pix.jpeg" style="height:10%; width:10%"> -->
+    </a>
+  </div>
+  <hr>
+  <div class="panel-body" *ngIf='profile'>
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>Profile</h4>
+        <img src="{{profile.avatar_url}}" alt="Profile Image" style="height:89%; width:85%" class="img-circle img-responsive">
+      </div>
 
-    <hr>
-    <div class="col-sm-5" *ngIf="profile">
-      <h4>Details</h4>
-      <p> Name: <b>{{profile.name}} </b></p>
-      <p> Username: <b>{{profile.login }} </b></p>
-      <p> Place : <b>{{profile.location}} </b></p>
-      <p> joined : <b>{{profile.created_at}} </b></p>
+      <hr>
+      <div class="col-sm-5" *ngIf="profile">
+        <h4>Details</h4>
+        <p> Name: <b>{{profile.name}} </b></p>
+        <p> Username: <b>{{profile.login }} </b></p>
+        <p> Place : <b>{{profile.location}} </b></p>
+        <p> joined : <b>{{profile.created_at}} </b></p>
 
 
+      </div>
+      <div class="col-sm-4" *ngIf="profile">
+        <h4> Following</h4>
+        <p>
+          <span class="label label-default">{{profile.followers}} Followers </span>
+          <span class="label label-primary"> {{profile.following}} Following </span>
+          <!-- <span class="label label-success">{{profile.public_repos}} Repositories </span> -->
+        </p>
+
+      </div>
     </div>
-    <div class="col-sm-4" *ngIf="profile">
-      <h4> Following</h4>
-      <p>
-        <span class="label label-default">{{profile.followers}} Followers </span>
-        <span class="label label-primary"> {{profile.following}} Following </span>
-        <!-- <span class="label label-success">{{profile.public_repos}} Repositories </span> -->
+  </div>
+  <hr>
+  <div class="panel-heading">
+    <h3 class="panel-title"> Repos</h3>
+    <div class="panel-body" *ngFor="let repo of repos">
+      <p> {{repo.name}}
+        <a href="{{repos.html_url}}" class="btn btn-sm btn-warning pull-right"> View Repository</a>
       </p>
-
+      <p> {{repo.description}}</p>
     </div>
-  </div>
-</div>
-<hr>
-<div class="panel-heading">
-  <h3 class="panel-title"> Repos</h3>
-  <div class="panel-body" *ngFor="let repo of repos">
-    <p> {{repo.name}}
-      <a href="{{repos.html_url}}" class="btn btn-sm btn-warning pull-right"> View Repository</a>
-    </p>
-    <p> {{repo.description}}</p>
-  </div>
 
+  </div>
 </div>

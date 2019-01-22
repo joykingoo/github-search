@@ -4,6 +4,9 @@ h4{
 h3{
   color: gray
 }
-panel-heading{
+.panel-heading{
   align-content: right
+}
+.search-form{
+   padding-top :50px;
 }
