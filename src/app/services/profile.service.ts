@@ -16,12 +16,12 @@ export class ProfileService {
   this.repo='';
 }
 getProfileInfo() :any{
-  return this.http.get("https://api.github.com/users/"+ this.username +"?access_token =d1a4b5149175e44c92d4b29f6fab41c4df850acb")
+  return this.http.get("https://api.github.com/users/"+ this.username +"?access_token=d1a4b5149175e44c92d4b29f6fab41c4df850acb")
   .pipe(map(res =>res));
 }
 
 getProfileRepos() :any{
-  return this.http.get("https://api.github.com/users/"+ this.username +"/repos?access_token =d1a4b5149175e44c92d4b29f6fab41c4df850acbd")
+  return this.http.get("https://api.github.com/users/"+ this.username +"/repos?access_token=d1a4b5149175e44c92d4b29f6fab41c4df850acb")
   .pipe(map(res =>res));
 
 }
