@@ -1,4 +1,4 @@
-import { Directive } from '@angular/core';
+import { Directive, HostBinding, Input, HostListener} from '@angular/core';
 import { DomSanitizer, SafeStyle } from "@angular/platform-browser";
 
 @Directive({
@@ -7,7 +7,7 @@ import { DomSanitizer, SafeStyle } from "@angular/platform-browser";
 export class HighlightDirective {
 
     private toggle: boolean = false;
-    @Input() color: string = 'red';
+    @Input() color: string = 'blue';
 
     constructor(private doms: DomSanitizer) { }
 
