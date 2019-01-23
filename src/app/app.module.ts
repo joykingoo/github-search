@@ -8,11 +8,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router'
 import { RepositoryComponent } from './repository/repository.component';
+import { HighlightDirective } from './highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    RepositoryComponent
+    RepositoryComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
